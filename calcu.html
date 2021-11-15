@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Simple Web Calculator </title> 
+
+<body style="background-color:#d3d3d3;">
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+  
+</head>
+
+
+<body>
+
+
+ <div>
+ <font size ="7"> <h2> SIMPLE WEB CALCULATOR </h2> </font> <hr />
+ Enter the First Number: <input type= "number" placeholder="Number 1" 
+ id="num1" /><br />	
+ Enter the Second Number: <input type= "number" placeholder="Number 2" 
+ id="num2" /><br />
+ 
+ <button id="add">+</button>
+ <button id="sub">-</button>
+ <button id="mul">x</button>
+ <button id="div">/</button>
+
+ <br />
+ <input type="number" readonly id="result" />
+ </div>
+ <script type="text/javascript">
+  var n1 = document.getElementById("num1");
+   var n2 = document.getElementById("num2");
+    var res = document.getElementById("result");
+	
+	document.getElementById("add").addEventListener
+	("click", function() {
+	res.value= 
+	parseInt(n1.value)+parseInt(n2.value);
+	});
+	
+	document.getElementById("sub").addEventListener
+	("click", function() {
+	res.value = parseInt(n1.value)-parseInt(n2.value);
+	});
+	
+	document.getElementById("mul").addEventListener
+	("click", function() {
+	res.value= 
+	parseInt(n1.value)*parseInt(n2.value);
+	});
+	
+	document.getElementById("div").addEventListener
+	("click", function() {
+	res.value= 
+	parseInt(n1.value)/parseInt(n2.value);
+	});
+	</script>
+</body>
+
+</html>
